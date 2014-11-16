@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Definimos un LinearLayout para definir la estructura de la parte grafica de la 
+primera actividad de la aplicación -->
+<!-- La orientación de dicho LinearLayout será vertical y su ancho y su largo
+se adaptan a todo el ancho de la pantalla  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+   <!-- creamos un TextView (Mostrara el texto que le hemos definido, en este caso, "hello world ", que 
+     esta definido en string.xml, donde se define el texto de los diferentes botones o textos) 
+   Se adapatara a todo el ancho de la pantalla y su altura se adaptará según el contenido 
+   Tendrá un margen superior y un tamaño de 40-->
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:text="@string/hello"
+    android:textSize="40sp" />
+
+</LinearLayout>

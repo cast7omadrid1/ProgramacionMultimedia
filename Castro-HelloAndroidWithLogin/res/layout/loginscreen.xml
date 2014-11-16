@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Definimos un LinearLayout para definir la estructura de la parte grafica de la 
+segunda actividad de la aplicación
+-->
+<!--
+La orientación de dicho LinearLayout será vertical y su ancho y su largo
+se adaptan a todo el ancho de la pantalla
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+   creamos un TextView (Mostrara el texto que le hemos definido, en este caso, "UserName ", que 
+     esta definido en string.xml, donde se define el texto de los diferentes botones o textos) 
+   Su ancho tomará la dimensión del layout que lo contenga y su altura se adaptará según el contenido 
+   Tendrá un margen superior y un tamaño de 40
+    -->
+
+    <TextView
+        android:id="@+id/username_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username_string" >
+    </TextView>
+
+    <!--
+    Creamos un EditText que nos permitirá la introducción de texto 
+    Su eltura se adaptará al ancho de la pantalla y su ancho tomará 
+    la dimensión del layout que lo contenga
+    El Edittext recibirá el nombre de "Enter username"
+    Definiremos el tipo de teclado como tipo text
+    -->
+
+    <EditText
+        android:id="@+id/username_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_username_hint"
+        android:inputType="text" >
+    </EditText>
+    <!--
+  creamos un TextView (Mostrara el texto que le hemos definido, en este caso, "Password ", que 
+     esta definido en string.xml, donde se define el texto de los diferentes botones o textos) 
+  El ancho y su altura se adaptarán según el contenido y su ancho tomará la dimensión del layout que lo contenga
+   Tendrá un margen superior y un tamaño de 40
+    -->
+
+    <TextView
+        android:id="@+id/password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_string" >
+    </TextView>
+    <!--
+    Creamos un EditText que nos permitirá la introducción de texto 
+    Su eltura se adaptará al ancho de la pantalla y su ancho tomará 
+    la dimensión del layout que lo contenga
+    El Edittext recibirá el nombre de "Enter Password"
+    Definiremos el tipo de teclado como tipo textPassword
+    Al introducir los caracteres se convertiran en asteriscos
+    -->
+
+    <EditText
+        android:id="@+id/password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_password_hint"
+        android:inputType="textPassword" >
+    </EditText>
+    
+    <!-- Definimos un Button (boton) que se adaptara al contenido y
+    que tendra el texto de "Login"
+    Se colocara en el fondo de el layout
+     -->
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/login_string" >
+    </Button>
+
+</LinearLayout>
