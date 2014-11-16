@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--Definimos un LinearLayout para definir la estructura de la parte grafica de la 
+primera actividad de la aplicación-->
+    <!--Dentro del mismo crearemos un RelativeLayout 
+    Esto nos permitira indicar la posicion exacta donde 
+    deben colocarsse los diferentes elementos-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- Definimos el TextView que mostrará el texto "Resultado" -->
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultado:" />
+        <!--Definimos el edi text donde aparecerá el resultado de las 
+		operaciones a realiazar
+		Hemos quitado el cursor, las operaciones aparecen en el lado derecho
+		y hemos quitado lso bordes al EditText-->
+
+        <EditText
+            android:id="@+id/edt1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:background="#00000000"
+            android:cursorVisible="false"
+            android:gravity="right" />
+    </RelativeLayout>
+
+    <!-- Definimos un LinearLayout en esta ocasion horizontal 
+    respecto del primer layout definido-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- definimos un TableLayout que se adaptará al contenido -->
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!-- definimos una fila que estará posiconada
+            en el centro de la pantalla -->
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <!-- Definimos los primeros tres botones de la calculadora 1,2,3
+			Estos botones estarán redondeados gracias 
+			a : android:background="@drawable/roundedbutton"-->
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="3" />
+            </TableRow>
+            <!-- definimos un TableLayout que se adaptará al contenido -->
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <!--Definimos los  tres botones siguientes de la calculadora 4,5,6
+			Estos botones estarán redondeados gracias 
+			a : android:background="@drawable/rounded -->
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="6" />
+            </TableRow>
+            <!-- definimos un TableLayout que se adaptará al contenido -->
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <!-- Definimos los  tres botones siguientes de la calculadora 7,8,9
+			Estos botones estarán redondeados gracias 
+			a : android:background="@drawable/roundedbutton -->
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="9" />
+            </TableRow>
+            <!-- definimos un TableLayout que se adaptará al contenido -->
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <!-- Definimos el boton 0 al que le hemos eliminado el cursor  y los bordes
+                El texto aparecerá al lado derecho del mismo -->
+
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_span="3"
+                    android:background="@drawable/roundedbutton"
+                    android:text="0" />
+            </TableRow>
+        </TableLayout>
+<!-- Definimos los botones para las operaciones -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnPor"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="x" />
+
+            <Button
+                android:id="@+id/btnMas"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnMenos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="/" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+<!-- definimos el boton de borrar -->
+            <Button
+                android:id="@+id/btnC"
+                android:layout_width="50dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="C" />
+<!-- definimos el boton para sacar el resultado final -->
+            <Button
+                android:id="@+id/btnIgual"
+                android:layout_width="50dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/roundedbutton"
+                android:text="=" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
