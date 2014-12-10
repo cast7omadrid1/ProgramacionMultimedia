@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Mostrar canciones seleccionadas"
+    android:onClick="onClick" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    </LinearLayout>
